@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا | تمور المدينة المنورة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fbf9f5;
+            color: #3e2723;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* 1. البانر الإعلاني المتحرك */
+        .promo-banner {
+            background-color: #d4af37;
+            color: #2b1704;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 0;
+        }
+
+        .promo-content {
+            display: inline-block;
+            animation: marquee 16s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* 2. شريط التنقل العلوي */
+        .navbar {
+            background-color: #3a200a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-brand {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #f3e5ab;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: #5c3514;
+            color: #ffffff;
+        }
+
+        /* 3. الترويسة */
+        .page-header {
+            background-color: #4a2c11;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .page-header h1 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .page-header p {
+            color: #f3e5ab;
+            font-size: 14px;
+        }
+
+        /* 4. كروت المنتجات */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0d7ce;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            flex: 1 1 260px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            background-color: #c62828;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .badge-gold {
+            background-color: #d4af37;
+            color: #2b1704;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 19px;
+            color: #3a200a;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #5d4037;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 14px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background-color: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .order-btn:hover {
+            background-color: #1ebe5d;
+        }
+
+        /* 5. زر الواتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-size: 28px;
+            z-index: 1000;
+        }
+
+        /* 6. الفوتر */
+        footer {
+            background-color: #2b1704;
+            color: #e0d7ce;
+            text-align: center;
+            padding: 30px 15px 15px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- البانر الإعلاني المتحرك -->
+    <div class="promo-banner">
+        <div class="promo-content">
+            🚚 توصيل مجاني وسريع داخل المدينة المنورة للطلبات فوق 200 ريال • 🌴 تمور طازجة إنتاج الموسم من مزارع العالية
+        </div>
+    </div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🌴 تمور المدينة</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">الرئيسية</a>
+            <a href="products.html" class="nav-item active">المنتجات</a>
+            <a href="location.html" class="nav-item">موقعنا</a>
+            <a href="faq.html" class="nav-item">الأسئلة الشائعة</a>
+            <a href="about.html" class="nav-item">عن المتجر</a>
+        </div>
+    </nav>
+
+    <!-- الترويسة -->
+    <header class="page-header">
+        <h1>قائمة التمور الفاخرة</h1>
+        <p>اختر ما يناسب ذوقك واطلب فوراً عبر تطبيق الواتساب</p>
+    </header>
+
+    <!-- شبكة المنتجات الكاملة -->
+    <div class="container">
+        <div class="products-grid">
+
+            <!-- عجوة المدينة -->
+            <div class="card">
+                <span class="badge">الأكثر طلباً 🔥</span>
+                <div>
+                    <img src="ajwa.jpg" alt="عجوة المدينة" class="product-img">
+                    <h3>عجوة المدينة الفاخرة</h3>
+                    <p>عجوة حبة سوداء طرية من مزارع العالية المباركة، مليئة بالقيمة الغذائية والبركة.</p>
+                </div>
+                <div>
+                    <span class="price">70 ر.س / كجم</span>
+                    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%AC%D9%88%D8%A9%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B1%D8%A9" target="_blank" class="order-btn">طلب عبر واتساب 💬</a>
+                </div>
+            </div>
+
+            <!-- صقعي المدينة -->
+            <div class="card">
+                <span class="badge badge-gold">مثالي للضيافة ✨</span>
+                <div>
+                    <img src="sagae.jpg" alt="صقعي المدينة" class="product-img">
+                    <h3>صقعي المدينة الممتاز</h3>
+                    <p>حبة شقراء متماسكة وقرمشة خفيفة من الأعلى، طعم معتدل يناسب كل الأذواق.</p>
+                </div>
+                <div>
+                    <span class="price">55 ر.س / كجم</span>
+                    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B5%D9%82%D8%B9%D9%8A%20%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D9%85%D9%85%D8%AA%D8%A7%D8%B2" target="_blank" class="order-btn">طلب عبر واتساب 💬</a>
+                </div>
+            </div>
+
+            <!-- مجدول فاخر -->
+            <div class="card">
+                <span class="badge">حجم جامبو 👑</span>
+                <div>
+                    <img src="majdool.jpg" alt="مجدول فاخر" class="product-img">
+                    <h3>مجدول ملكي فاخر</h3>
+                    <p>حبات كبيرة جداً ولحمية بقوام ناعم وغني كالحلوى الطبيعية، اختيار راقٍ للإهداء.</p>
+                </div>
+                <div>
+                    <span class="price">85 ر.س / كجم</span>
+                    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D9%85%D8%AC%D8%AF%D9%88%D9%84%20%D9%85%D9%84%D9%83%D9%8A%20%D9%81%D8%A7%D8%AE%D8%B1" target="_blank" class="order-btn">طلب عبر واتساب 💬</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" target="_blank" class="whatsapp-float">
+        💬
+    </a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><strong>تمور المدينة المنورة</strong> - مزارع العالية</p>
+        <p>جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+</body>
+</html>

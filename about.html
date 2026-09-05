@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن المتجر | تمور المدينة المنورة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fbf9f5;
+            color: #3e2723;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* 1. البانر الإعلاني المتحرك */
+        .promo-banner {
+            background-color: #d4af37;
+            color: #2b1704;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 0;
+        }
+
+        .promo-content {
+            display: inline-block;
+            animation: marquee 16s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* 2. شريط التنقل العلوي */
+        .navbar {
+            background-color: #3a200a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-brand {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #f3e5ab;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: #5c3514;
+            color: #ffffff;
+        }
+
+        /* 3. الترويسة */
+        .page-header {
+            background-color: #4a2c11;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .page-header h1 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .page-header p {
+            color: #f3e5ab;
+            font-size: 14px;
+        }
+
+        /* 4. محتوى عن المتجر */
+        .container {
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .story-card {
+            background: #ffffff;
+            border: 1px solid #e0d7ce;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            line-height: 1.9;
+        }
+
+        .story-card h2 {
+            color: #3a200a;
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #f0e6d6;
+            padding-bottom: 8px;
+        }
+
+        .story-card p {
+            color: #5d4037;
+            font-size: 15px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .values-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .values-list li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: #4a2c11;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 5. زر الواتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-size: 28px;
+            z-index: 1000;
+        }
+
+        /* 6. الفوتر */
+        footer {
+            background-color: #2b1704;
+            color: #e0d7ce;
+            text-align: center;
+            padding: 30px 15px 15px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- البانر الإعلاني المتحرك -->
+    <div class="promo-banner">
+        <div class="promo-content">
+            🚚 توصيل مجاني وسريع داخل المدينة المنورة للطلبات فوق 200 ريال • 🌴 تمور طازجة إنتاج الموسم من مزارع العالية
+        </div>
+    </div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🌴 تمور المدينة</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">الرئيسية</a>
+            <a href="products.html" class="nav-item">المنتجات</a>
+            <a href="location.html" class="nav-item">موقعنا</a>
+            <a href="faq.html" class="nav-item">الأسئلة الشائعة</a>
+            <a href="about.html" class="nav-item active">عن المتجر</a>
+        </div>
+    </nav>
+
+    <!-- الترويسة -->
+    <header class="page-header">
+        <h1>قصتنا مع بركة المدينة</h1>
+        <p>أصالة الماضي وجودة الحاضر من قلب طيبة الطيبة</p>
+    </header>
+
+    <div class="container">
+
+        <div class="story-card">
+            <h2>🌴 من نحن</h2>
+            <p>
+                انطلقنا من عبق المدينة المنورة وبركتها لنقدم لكم خيرات أرضها الطيبة. نحن متخصصون في انتقاء أجود أنواع التمور من مزارع العالية المشهورة بجودتها وتاريخها العريق. نحرص في كل موسم على فرز المحصول يدوياً واختيار الحبات الممتازة لضمان تجربة استثنائية تليق بكم وبضيوفكم.
+            </p>
+        </div>
+
+        <div class="story-card">
+            <h2>✨ ما الذي يميزنا؟</h2>
+            <ul class="values-list">
+                <li>✔️ <strong>المصدر الموثوق:</strong> قطاف مباشر من مزارع المدينة دون وسطاء.</li>
+                <li>✔️ <strong>الجودة العالية:</strong> حبات منتقاة بعناية وتخزين تحت درجات تبريد مثالية.</li>
+                <li>✔️ <strong>تغليف فاخر:</strong> علب وتغليف محكم يحفظ الطعم ومناسب كهدية راقية.</li>
+                <li>✔️ <strong>خدمة سريعة:</strong> شحن مبرد وتواصل مباشر عبر الواتساب لتلبية طلباتكم.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%84%D9%89%20%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%83%D9%85" target="_blank" class="whatsapp-float">
+        💬
+    </a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><strong>تمور المدينة المنورة</strong> - مزارع العالية</p>
+        <p>جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+</body>
+</html>

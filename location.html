@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعنا | تمور المدينة المنورة</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fbf9f5;
+            color: #3e2723;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* البانر الإعلاني المتحرك */
+        .promo-banner {
+            background-color: #d4af37;
+            color: #2b1704;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 0;
+        }
+
+        .promo-content {
+            display: inline-block;
+            animation: marquee 16s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* شريط التنقل العلوي */
+        .navbar {
+            background-color: #3a200a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-brand {
+            color: #d4af37;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #f3e5ab;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: #5c3514;
+            color: #ffffff;
+        }
+
+        /* محتوى الصفحة */
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .location-card {
+            background: #ffffff;
+            border: 1px solid #e0d7ce;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .location-card h1 {
+            color: #3a200a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background-color: #fdfaf5;
+            border: 1px dashed #d4af37;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: right;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .map-btn {
+            display: inline-block;
+            background-color: #4285f4;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+            box-shadow: 0 3px 8px rgba(66, 133, 244, 0.3);
+            transition: 0.2s;
+        }
+
+        .map-btn:hover {
+            background-color: #3367d6;
+        }
+
+        /* زر الواتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-size: 28px;
+            z-index: 1000;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #2b1704;
+            color: #e0d7ce;
+            text-align: center;
+            padding: 30px 15px 15px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- البانر الإعلاني المتحرك -->
+    <div class="promo-banner">
+        <div class="promo-content">
+            🚚 توصيل مجاني وسريع داخل المدينة المنورة للطلبات فوق 200 ريال • 🌴 تمور طازجة إنتاج الموسم من مزارع العالية
+        </div>
+    </div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">🌴 تمور المدينة</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">الرئيسية</a>
+            <a href="products.html" class="nav-item">المنتجات</a>
+            <a href="location.html" class="nav-item active">موقعنا</a>
+            <a href="faq.html" class="nav-item">الأسئلة الشائعة</a>
+            <a href="about.html" class="nav-item">عن المتجر</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="location-card">
+            <h1>📍 موقع المعرض والزيارة</h1>
+            <p>يسعدنا ويشرفنا استقبالكم في معرضنا بالمدينة المنورة لتذوق أجود أنواع التمور.</p>
+
+            <div class="info-box">
+                <p>📍 <strong>المدينة:</strong> المدينة المنورة، المملكة العربية السعودية</p>
+                <p>⏰ <strong>أوقات العمل:</strong> يومياً من الساعة 8:00 صباحاً حتى 11:00 مساءً</p>
+                <p>📞 <strong>للتواصل والاستفسار:</strong> 0542574816</p>
+            </div>
+
+            <!-- زر فتح الخريطة المباشر -->
+            <a href="https://maps.app.goo.gl/Rhgk1WS3LYuwVLZX8?g_st=ac" target="_blank" class="map-btn">
+                🗺️ فتح الموقع في خرائط Google
+            </a>
+        </div>
+    </div>
+
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/966542574816?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D8%B6" target="_blank" class="whatsapp-float">
+        💬
+    </a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p><strong>تمور المدينة المنورة</strong> - مزارع العالية</p>
+        <p>جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+</body>
+</html>
